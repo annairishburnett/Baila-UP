@@ -25,6 +25,14 @@ section, summary, time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;}
 
+	div.teachers {
+		display: flex;
+		flex-flow: column wrap;
+	}
+	.teachers section {
+		margin-bottom: 2em;
+	}
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
@@ -70,6 +78,16 @@ input, select, textarea {
 	-webkit-appearance: none;
 	-ms-appearance: none;
 	appearance: none;
+}
+
+iframe {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+.highlight {
+	background: yellow;
 }
 
 /* Basic */
@@ -437,7 +455,7 @@ input, select, textarea {
 			}
 
 			.row.gtr-uniform {
-				margin-top: -2em;
+				margin-top: 1em;
 			}
 
 				.row.gtr-uniform > * {
@@ -446,7 +464,7 @@ input, select, textarea {
 
 		.row.gtr-150 {
 			margin-top: 0;
-			margin-left: -3em;
+			margin-left: 1em;
 		}
 
 			.row.gtr-150 > * {
@@ -454,7 +472,7 @@ input, select, textarea {
 			}
 
 			.row.gtr-150.gtr-uniform {
-				margin-top: -3em;
+				margin-top: 1em;
 			}
 
 				.row.gtr-150.gtr-uniform > * {
@@ -689,7 +707,7 @@ input, select, textarea {
 
 				.row.gtr-150 {
 					margin-top: 0;
-					margin-left: -3em;
+					margin-left: 1em;
 				}
 
 					.row.gtr-150 > * {
@@ -697,7 +715,7 @@ input, select, textarea {
 					}
 
 					.row.gtr-150.gtr-uniform {
-						margin-top: -3em;
+						margin-top: 1em;
 					}
 
 						.row.gtr-150.gtr-uniform > * {
@@ -1770,7 +1788,11 @@ input, select, textarea {
 	header.major {
 		margin: 0 0 1.5em 0;
 		text-transform: uppercase;
+		
 	}
+		header.major.center {
+			text-align: center;
+		}
 
 		header.major h2, header.major h3, header.major h4, header.major h5, header.major h6 {
 			margin: 0;
@@ -2079,6 +2101,45 @@ input, select, textarea {
 			border-radius: 100%;
 		}
 
+/* Gallery */
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+	padding: 10px;
+	justify-content: center;
+  }
+  
+  .gallery-item {
+	flex: 1 1 calc(33.33% - 20px);
+	/* responsive item size */
+	box-sizing: border-box;
+	overflow: hidden;
+  }
+  
+  .gallery-item img {
+	width: 100%;
+	height: auto;
+	display: block;
+	object-fit: cover;
+	border-radius: 4px;
+  }
+  
+  @media (max-width: 1200px) {
+	.gallery-item {
+	  flex: 1 1 calc(50% - 20px);
+	  /* 3 columns */
+	}
+  }
+  
+  @media (max-width: 600px) {
+	.gallery-item {
+	  flex: 1 1 calc(100% - 20px);
+	  /* 1 column */
+	}
+  }
+
 /* List */
 
 	ol {
@@ -2146,6 +2207,10 @@ input, select, textarea {
 	ul.labeled-icons {
 		list-style: none;
 		padding-left: 0;
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+		flex-wrap: wrap;
 	}
 
 		ul.labeled-icons li {
@@ -2541,6 +2606,12 @@ input, select, textarea {
 			opacity: 0.25;
 		}
 
+	input.center {
+		margin: 0 auto;
+		display: block;
+		text-align: center;
+	}
+
 /* Feature */
 
 	.feature {
@@ -2885,7 +2956,7 @@ input, select, textarea {
 	#banner {
 		padding: 11em 0 8em 0 ;
 		background-attachment: scroll, fixed;
-		background-image: url("images/overlay.png"), url("../../images/banner-1.webp");
+		background-image: url("images/overlay.png"), url("../../images/banner.webp");
 		background-position: center center;
 		background-size: cover;
 		line-height: 2;
