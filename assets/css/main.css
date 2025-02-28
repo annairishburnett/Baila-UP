@@ -2606,11 +2606,10 @@ iframe {
 			opacity: 0.25;
 		}
 
-	input.center {
-		margin: 0 auto;
+	/* input.center {
+		margin: 2.5em auto 5em auto;
 		display: block;
-		text-align: center;
-	}
+	} */
 
 /* Feature */
 
