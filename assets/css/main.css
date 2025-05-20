@@ -2117,10 +2117,14 @@ iframe {
   }
   
   .gallery-item img {
-	width: 100%;
+	/* width: 390px;
+	height: 219px; */
+	max-width: 100%;
 	height: auto;
-	display: block;
+	flex: 1 1 auto;
 	object-fit: cover;
+	/* need to delete display block, but then messes up gap around img */
+	display: block;
 	border-radius: 4px;
   }
   
