@@ -124,6 +124,9 @@ iframe {
 		color: #cd4f4f;
 		text-decoration: underline;
 	}
+		.testimonialContainer a {
+			color: rgba(255, 255, 255, 0.75);
+		}
 
 		a:hover {
 			text-decoration: none;
