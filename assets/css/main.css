@@ -137,6 +137,11 @@ iframe {
 		font-weight: 700;
 	}
 
+		span.strong.white {
+			color: #fff;
+			font-weight: 700;
+		}
+
 	em, i {
 		font-style: italic;
 	}
